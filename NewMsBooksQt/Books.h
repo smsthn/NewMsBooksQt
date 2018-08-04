@@ -9,27 +9,29 @@
 
 class Books
 {
-public:
-	Books();
+	friend class Disturbuter;
+private:
+	Books(){}
 	~Books();
 
 	void initialize();
 	void desirialize();
 
-	static const Book& getBook(QString name);
-	static const QStringList& getAllBooks();
-	static const QStringList& getAllTags();
-	static const QStringList& getAllReadingStatus();
-	static const QStringList& getAllCatagories();
-	
-	static void addBook(Book&& book, std::function<void()> fail);
-	static void removeBook(QString bookName);
-	static void modifyBook(QString oldName,Book&& newBook, std::function<void()> fail);
 
-	static void addTag(QString tag);
+	const Book& getBook(QString name);
+	const QStringList& getAllBooks();
+	const QStringList& getAllTags();
+	const QStringList& getAllReadingStatus();
+	const QStringList& getAllCatagories();
+	
+	void addBook(Book&& book, std::function<void()> fail);
+	void removeBook(QString bookName);
+	void modifyBook(QString oldName,Book&& newBook, std::function<void()> fail);
+
+	void addTag(QString tag);
 
 private:
-	static bool checkValues(const Book& book);
+	bool checkValues(const Book& book);
 
 
 private:
@@ -37,5 +39,6 @@ private:
 	static QStringList allTags;
 	static QStringList allCatagories;
 	static QStringList allReadingStatus;
+
 };
 

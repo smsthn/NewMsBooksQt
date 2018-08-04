@@ -57,6 +57,9 @@
     <ClCompile Include="Books.cpp">
       <Filter>BooksClasses</Filter>
     </ClCompile>
+    <ClCompile Include="Disturbuter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -77,6 +80,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewMsBooksQt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Disturbuter.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

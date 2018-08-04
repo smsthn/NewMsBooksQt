@@ -2,9 +2,6 @@
 #include "Books.h"
 
 
-Books::Books()
-{
-}
 
 
 Books::~Books()
@@ -13,6 +10,7 @@ Books::~Books()
 
 void Books::initialize()
 {
+	//get all books from file
 	TheSerializationClass sr;
 	sr.deserializeTheBooks("D:/MassoudBooks/prsave.dat");
 	allBooks = sr.allBooksStd;
@@ -20,8 +18,9 @@ void Books::initialize()
 	{
 		allTags.push_back(QString::fromStdString(tag));
 	}
-
-	//set all catagories and all all reading status
+	//init allCatatgories and allReadingStatus
+	allCatagories = std::move(QStringList() << "Any"<< "Math"<< "GameDev"<< "CSharp"<< "Java"<< "Cs"<< "Cpp"<< "Emmbedded"<< "PyAndMl"<< "Art"<< "Android");
+	allReadingStatus = std::move(QStringList() << "Any" << "Reading" << "WannaRead" << "WannaRead2" << "YetToWannaRead" << "DelayedReading" << "Finished" << "Dropped");
 }
 
 
