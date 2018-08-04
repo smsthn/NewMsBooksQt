@@ -15,34 +15,52 @@ Disturbuter::~Disturbuter()
 	mainWindow = nullptr;
 }
 
+void Disturbuter::recieveRequest(IRequests * sender, Book & book, IRequests::MSFlags flags)
+{
+}
 
+
+
+
+
+
+
+
+
+
+/*
 //Books Methoods
-const Book & Disturbuter::getBook(QString name)
+const Book  Disturbuter::getBook(QString name)
 {
-	Booksptr->getBook(name);
+	return Booksptr->getBook(name);
 }
 
-const QStringList & Disturbuter::getAllBooks()
+const QStringList  Disturbuter::getAllBooks()
 {
-	Booksptr->getAllBooks();
+	return Booksptr->getAllBooks();
 }
 
-const QStringList & Disturbuter::getAllTags()
+const QStringList  Disturbuter::getAllTags()
 {
-	Booksptr->getAllTags();
+	return Booksptr->getAllTags();
 }
 
-const QStringList & Disturbuter::getAllReadingStatus()
+const QStringList  Disturbuter::getAllReadingStatus()
 {
-	Booksptr->getAllReadingStatus();
+	return Booksptr->getAllReadingStatus();
 }
 
-const QStringList & Disturbuter::getAllCatagories()
+const QStringList  Disturbuter::getAllCatagories()
 {
-	Booksptr->getAllCatagories();
+	return Booksptr->getAllCatagories();
 }
 
-void Disturbuter::addBook(Book && book)
+QStringList Disturbuter::getFilteredBooksList(const QString & catagory, const QString & readingStatus, const QStringList & tags)
+{
+	return Booksptr->getFilteredBooksList(catagory, readingStatus, tags);
+}
+
+void Disturbuter::addBook(Book & book)
 {
 	Booksptr->addBook(std::move(book),nullptr);
 }
@@ -52,7 +70,7 @@ void Disturbuter::removeBook(QString bookName)
 	Booksptr->removeBook(bookName);
 }
 
-void Disturbuter::modifyBook(QString oldName, Book && newBook)
+void Disturbuter::modifyBook(QString oldName, Book & newBook)
 {
 	Booksptr->modifyBook(oldName,std::move(newBook),nullptr);
 }
@@ -62,3 +80,4 @@ void Disturbuter::addTag(QString tag)
 	Booksptr->addTag(tag);
 }
 //
+*/

@@ -60,6 +60,9 @@
     <ClCompile Include="Disturbuter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CustomListView.cpp">
+      <Filter>CustomWidgets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -77,6 +80,9 @@
     <ClInclude Include="Books.h">
       <Filter>BooksClasses</Filter>
     </ClInclude>
+    <ClInclude Include="IRequests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="NewMsBooksQt.h">
@@ -84,6 +90,9 @@
     </QtMoc>
     <QtMoc Include="Disturbuter.h">
       <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CustomListView.h">
+      <Filter>CustomWidgets</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,8 @@
 #pragma once
+#include "stdafx.h"
 #include <functional>
+#include "qstring.h"
+#include "qstringlist.h"
 #include <string>
 #include <vector>
 #include <Book.h>

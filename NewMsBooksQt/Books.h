@@ -9,36 +9,41 @@
 
 class Books
 {
+public:
+	Books() {}
+	~Books() {}
 	friend class Disturbuter;
 private:
-	Books(){}
-	~Books();
+	
+	
 
 	void initialize();
 	void desirialize();
 
 
-	const Book& getBook(QString name);
-	const QStringList& getAllBooks();
+	Book getBook(QString name);
+	 QStringList getAllBooks();
 	const QStringList& getAllTags();
 	const QStringList& getAllReadingStatus();
 	const QStringList& getAllCatagories();
+	QStringList getFilteredBooksList(const QString& catagory, const QString& readingStatus, const QStringList& tags);
 	
-	void addBook(Book&& book, std::function<void()> fail);
+	void addBook(Book & book, std::function<void()> fail);
 	void removeBook(QString bookName);
-	void modifyBook(QString oldName,Book&& newBook, std::function<void()> fail);
+	void modifyBook(QString oldName, Book & newBook, std::function<void()> fail);
 
 	void addTag(QString tag);
 
 private:
 	bool checkValues(const Book& book);
+	bool checkTagsInBook(const Book& book, const QStringList& tags);
 
 
 private:
-	static std::vector<std::unique_ptr<Book>> allBooks;
-	static QStringList allTags;
-	static QStringList allCatagories;
-	static QStringList allReadingStatus;
+	 std::vector<std::unique_ptr<Book>> allBooks;
+	 QStringList allTags;
+	 QStringList allCatagories;
+	 QStringList allReadingStatus;
 
 };
 
