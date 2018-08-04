@@ -28,6 +28,15 @@
       <Extensions>moc;h;cpp</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="BooksClasses">
+      <UniqueIdentifier>{746a5ed3-0b17-4c30-bedf-e3a8afcbac52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialitzation">
+      <UniqueIdentifier>{b351ef0b-f3d0-4faf-b149-2486fc134d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CustomWidgets">
+      <UniqueIdentifier>{0e8b9977-6ca5-43fd-a889-99d8ef004a23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,10 +48,31 @@
     <ClCompile Include="NewMsBooksQt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TheSerializationClass.cpp">
+      <Filter>Serialitzation</Filter>
+    </ClCompile>
+    <ClCompile Include="MassoudBooksSr.pb.cc">
+      <Filter>Serialitzation</Filter>
+    </ClCompile>
+    <ClCompile Include="Books.cpp">
+      <Filter>BooksClasses</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>BooksClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="MassoudBooksSr.pb.h">
+      <Filter>Serialitzation</Filter>
+    </ClInclude>
+    <ClInclude Include="TheSerializationClass.h">
+      <Filter>Serialitzation</Filter>
+    </ClInclude>
+    <ClInclude Include="Books.h">
+      <Filter>BooksClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
